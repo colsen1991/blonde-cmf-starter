@@ -1,0 +1,64 @@
+{
+  "name": "blonde-cmf-starter",
+  "version": "1.0.0",
+  "description": "Starter kit for apps that use Blonde CMF",
+  "scripts": {
+    "test": "export NODE_ENV=test",
+    "build": "npm run clean && webpack --config webpack.config.prod.js",
+    "dev": "export NODE_ENV=development && nodemon server/server.js",
+    "prod": "export NODE_ENV=production && node build/server/server.js",
+    "lint": "lint",
+    "clean": "rimraf build/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/colsen1991/blonde-cmf-starter.git"
+  },
+  "keywords": [
+    "blonde-cmf",
+    "html",
+    "css",
+    "javascript",
+    "vue",
+    "pouchdb",
+    "node",
+    "express",
+    "webpack"
+  ],
+  "author": "Christer Olsen <colsen1991@gmail.com> (https://christerolsen.no)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/colsen1991/blonde-cmf-starter/issues"
+  },
+  "homepage": "https://github.com/colsen1991/blonde-cmf-starter#readme",
+  "devDependencies": {
+    "babel-core": "^6.24.0",
+    "babel-loader": "^7.0.0-beta.1",
+    "babel-preset-es2015": "^6.24.0",
+    "copy-webpack-plugin": "^4.0.1",
+    "css-loader": "^0.27.3",
+    "eslint": "^3.18.0",
+    "eslint-config-vue": "^2.0.2",
+    "eslint-plugin-vue": "^2.0.1",
+    "json-loader": "^0.5.4",
+    "nodemon": "^1.11.0",
+    "rimraf": "^2.6.1",
+    "vue-loader": "^11.1.4",
+    "vue-template-compiler": "^2.2.4",
+    "webpack": "^2.2.1",
+    "webpack-dev-middleware": "^1.10.1",
+    "webpack-hot-middleware": "^2.17.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^5.0.0-alpha.5",
+    "express-useragent": "^1.0.7",
+    "promise-polyfill": "^6.0.2",
+    "spdy": "^3.4.4",
+    "vue": "^2.2.4",
+    "vue-router": "^2.3.0",
+    "vuex": "^2.2.1",
+    "vuex-router-sync": "^4.1.2",
+    "whatwg-fetch": "^2.0.3"
+  }
+}
