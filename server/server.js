@@ -1,8 +1,13 @@
-const https = require('./instances/https');
-const http = require('./instances/http');
+const express = require('express');
+const bodyParser = require('body-parser');
 
-// TODO Proper logging (also in https and http)
 console.log(`Server starting in ${process.env.NODE_ENV.toUpperCase()} mode...`);
 
-https();
-http();
+const app = express();
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+const server = app.listen(3000, (...args) => {
+  console.log(args);
+});

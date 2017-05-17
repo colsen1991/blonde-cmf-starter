@@ -23,7 +23,7 @@ module.exports = Object.assign({
         to: '..'
       },
       {
-        from: 'web/incompatible-browser.html',
+        from: 'web/browser.html',
         to: '..'
       },
       {
@@ -33,6 +33,10 @@ module.exports = Object.assign({
       {
         from: 'web/img',
         to: '../img'
+      },
+      {
+        from: 'package.json',
+        to: '../..'
       }
     ])
   ]

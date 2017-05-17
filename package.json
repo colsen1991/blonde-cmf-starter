@@ -4,11 +4,13 @@
   "description": "Starter kit for apps that use Blonde CMF",
   "scripts": {
     "test": "export NODE_ENV=test",
-    "build": "npm run clean && webpack --config webpack.config.prod.js",
-    "dev": "export NODE_ENV=development && nodemon server/server.js",
-    "prod": "export NODE_ENV=production && node build/server/server.js",
+    "build": "export NODE_ENV=production && npm run clean && webpack --config webpack.config.prod.js",
+    "server": "export NODE_ENV=development && nodemon server/server.js",
+    "front": "export NODE_ENV=development && webpack-dev-server --config webpack.config.dev --content-base web/ --hot",
+    "dev": "export NODE_ENV=development && pm2 start webpack-dev-server -- --config webpack.config.dev --content-base web/ --hot && pm2 start nodemon -- server/server.js",
+    "prod": "export NODE_ENV=production && pm2 start server/server.js",
     "lint": "lint",
-    "clean": "rimraf build/*"
+    "clean": "rm -rf build/*"
   },
   "repository": {
     "type": "git",
@@ -16,14 +18,17 @@
   },
   "keywords": [
     "blonde-cmf",
+    "cmf",
     "html",
     "css",
     "javascript",
+    "js",
     "vue",
     "pouchdb",
     "node",
     "express",
-    "webpack"
+    "webpack",
+    "babel"
   ],
   "author": "Christer Olsen <colsen1991@gmail.com> (https://christerolsen.no)",
   "license": "MIT",
@@ -42,19 +47,16 @@
     "eslint-plugin-vue": "^2.0.1",
     "json-loader": "^0.5.4",
     "nodemon": "^1.11.0",
-    "rimraf": "^2.6.1",
+    "pm2": "^2.4.6",
     "vue-loader": "^11.1.4",
     "vue-template-compiler": "^2.2.4",
     "webpack": "^2.2.1",
-    "webpack-dev-middleware": "^1.10.1",
-    "webpack-hot-middleware": "^2.17.1"
+    "webpack-dev-server": "^2.4.5"
   },
   "dependencies": {
     "body-parser": "^1.17.1",
     "express": "^5.0.0-alpha.5",
-    "express-useragent": "^1.0.7",
     "promise-polyfill": "^6.0.2",
-    "spdy": "^3.4.4",
     "vue": "^2.2.4",
     "vue-router": "^2.3.0",
     "vuex": "^2.2.1",
