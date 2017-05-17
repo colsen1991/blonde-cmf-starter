@@ -4,7 +4,7 @@ import initServiceWorker from './swreg';
 
 initServiceWorker();
 
-const app = new Vue({
+new Vue({
   el: '#app',
   render: (h) => h(Test)
 });

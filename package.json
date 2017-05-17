@@ -9,7 +9,7 @@
     "frontend": "export NODE_ENV=development && webpack-dev-server --config webpack.config.dev --content-base web/",
     "dev": "export NODE_ENV=development && pm2 start webpack-dev-server -- --config webpack.config.dev --content-base web/ --hot && pm2 start nodemon -- server/server.js",
     "prod": "export NODE_ENV=production && pm2 start server/server.js",
-    "lint": "lint",
+    "lint": "eslint server/ web/",
     "clean": "rm -rf build/*"
   },
   "repository": {
@@ -38,6 +38,7 @@
   "homepage": "https://github.com/colsen1991/blonde-cmf-starter#readme",
   "devDependencies": {
     "babel-core": "^6.24.1",
+    "babel-eslint": "^7.2.3",
     "babel-loader": "^7.0.0",
     "babel-preset-es2015": "^6.24.1",
     "copy-webpack-plugin": "^4.0.1",

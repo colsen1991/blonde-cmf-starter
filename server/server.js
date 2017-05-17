@@ -8,6 +8,6 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-const server = app.listen(3000, (...args) => {
+app.listen(3000, (...args) => {
   console.log(args);
 });

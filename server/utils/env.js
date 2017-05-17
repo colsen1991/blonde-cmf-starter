@@ -23,6 +23,5 @@ module.exports = {
   getEnv,
   isDev,
   isProd,
-  isStaging,
   isTest
 };
