@@ -1,7 +1,3 @@
-function setEnv(env) {
-  process.env.NODE_ENV = env;
-}
-
 function getEnv() {
   return process.env.NODE_ENV;
 }
@@ -18,10 +14,7 @@ function isTest() {
   return getEnv() === 'test';
 }
 
-module.exports = {
-  setEnv,
-  getEnv,
-  isDev,
-  isProd,
-  isTest
-};
+exports.getEnv = getEnv;
+exports.isDev = isDev;
+exports.isProd = isProd;
+exports.isTest = isTest;

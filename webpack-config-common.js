@@ -3,7 +3,8 @@ require('whatwg-fetch');
 
 const paths = {
   appEntry: `${__dirname}/web/js/app.js`,
-  appOutput:`${__dirname}/build/web/js`,
+  appOutput: `${__dirname}/build/web/js`,
+  web: `${__dirname}/web`,
   webJs: `${__dirname}/web/js`,
   nodeModules: `${__dirname}/node_modules/`
 };
@@ -24,18 +25,16 @@ const config = {
       {
         test: /\.js$/,
         include: paths.webJs,
-        exclude: paths.nodeModules,
         loader: 'babel-loader'
       },
       {
         test: /\.vue$/,
         include: paths.webJs,
-        exclude: paths.nodeModules,
         loader: 'vue-loader'
       },
       {
         test: /\.json$/,
-        exclude: paths.nodeModules,
+        include: paths.web,
         loader: 'json-loader'
       }
     ]

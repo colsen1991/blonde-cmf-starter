@@ -4,12 +4,12 @@
   "description": "Starter kit for apps that use Blonde CMF",
   "scripts": {
     "test": "export NODE_ENV=test",
-    "build": "export NODE_ENV=production && npm run clean && webpack --config webpack.config.prod.js",
+    "build": "export NODE_ENV=production && npm run clean && webpack --config webpack-config-prod",
     "server": "export NODE_ENV=development && nodemon server/server.js",
-    "frontend": "export NODE_ENV=development && webpack-dev-server --config webpack.config.dev --content-base web/",
-    "dev": "export NODE_ENV=development && pm2 start webpack-dev-server -- --config webpack.config.dev --content-base web/ --hot && pm2 start nodemon -- server/server.js",
+    "frontend": "export NODE_ENV=development && webpack-dev-server --config webpack-config-dev --content-base web/",
+    "dev": "export NODE_ENV=development && pm2 start webpack-dev-server -- --config webpack-config-dev --content-base web/ --hot && pm2 start nodemon -- server/server.js",
     "prod": "export NODE_ENV=production && pm2 start server/server.js",
-    "lint": "eslint server/ web/",
+    "lint": "eslint server/ web/ utils/",
     "clean": "rm -rf build/*"
   },
   "repository": {

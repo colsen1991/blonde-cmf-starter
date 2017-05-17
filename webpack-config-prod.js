@@ -1,13 +1,14 @@
 const { optimize: { UglifyJsPlugin }, DefinePlugin } = require('webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const { config } = require('./webpack.config.common');
-
+const { config } = require('./webpack-config-common');
 
 module.exports = Object.assign({
   plugins: [
     new UglifyJsPlugin(),
     new DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('production')
+      'process.env': {
+        NODE_ENV: '"production"'
+      }
     }),
     new CopyWebpackPlugin([
       { from: 'server', to: '../../server' },
