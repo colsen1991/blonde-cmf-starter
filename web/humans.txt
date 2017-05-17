@@ -1,0 +1,15 @@
+/* TEAM */
+Your title: name.
+Location: loc.
+Site: site
+Twitter: twitter-username
+GitHub: github-username
+LinkedIn: linkedin-id
+
+/* THANKS */
+Name: name-or-site.
+
+/* SITE */
+Last update: yyyy/mm/dd
+Standards: standards, comma, sep.
+Software: software, tech, etc, comma, sep.

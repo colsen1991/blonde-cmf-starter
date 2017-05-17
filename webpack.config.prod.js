@@ -19,11 +19,15 @@ module.exports = Object.assign({
         to: '..'
       },
       {
-        from: 'web/error.html',
+        from: 'web/50x.html',
         to: '..'
       },
       {
-        from: 'web/browser.html',
+        from: 'web/old-browser.html',
+        to: '..'
+      },
+      {
+        from: 'web/404.html',
         to: '..'
       },
       {

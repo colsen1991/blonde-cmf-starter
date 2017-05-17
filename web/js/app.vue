@@ -7,3 +7,9 @@
     data: () => ({ msg: 'Hello world!' })
   }
 </script>
+
+<style scoped>
+  div {
+    color: red;
+  }
+</style>
