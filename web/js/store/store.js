@@ -1,21 +1,14 @@
-import Vue from 'vue';
 import Vuex from 'vuex';
 
-Vue.use(Vuex);
+function init(Vue, initialState, getters, actions, mutations) {
+  Vue.use(Vuex);
 
-const state = {};
+  return new Vuex.Store({
+    state: initialState,
+    getters,
+    actions,
+    mutations
+  });
+}
 
-const getters = {};
-
-const actions = {};
-
-const mutations = {};
-
-const store = new Vuex.Store({
-  state,
-  getters,
-  actions,
-  mutations
-});
-
-export default store;
+export default init;

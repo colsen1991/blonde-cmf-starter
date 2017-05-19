@@ -1,16 +1,12 @@
-import Vue from 'vue';
 import VueRouter from 'vue-router';
-import blonde from '../components/blonde.vue';
 
-Vue.use(VueRouter);
+function init(Vue, routes) {
+  Vue.use(VueRouter);
 
-const routes = [
-  { path: '/', component: blonde }
-];
+  return new VueRouter({
+    mode: 'history',
+    routes
+  });
+}
 
-const router = new VueRouter({
-  mode: 'history',
-  routes
-});
-
-export default router;
+export default init;

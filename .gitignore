@@ -1,6 +1,8 @@
 logs
+log.*
 *.log
 build
 node_modules
 .npm
 .idea
+_db
