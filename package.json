@@ -1,7 +1,7 @@
 {
   "name": "blonde-cmf-starter",
   "version": "1.0.0",
-  "description": "Starter kit for apps that use Blonde CMF",
+  "description": "Starter kit PWAs",
   "scripts": {
     "test": "export NODE_ENV=test",
     "build": "export NODE_ENV=production && npm run lint &&  npm run clean && webpack --config webpack-config-prod",
@@ -19,8 +19,6 @@
     "url": "https://github.com/colsen1991/blonde-cmf-starter.git"
   },
   "keywords": [
-    "blonde-cmf",
-    "cmf",
     "html",
     "css",
     "javascript",
